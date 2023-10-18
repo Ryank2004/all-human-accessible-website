@@ -104,8 +104,12 @@ article {
   background: white;
 }
 
-article h2 {
-  padding-left: 1em;
+article section {
+  background: white;
+}
+
+article section h2 {
+  justify-content: start;
 }
 
 h2 {
