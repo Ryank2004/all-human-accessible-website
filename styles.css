@@ -127,21 +127,20 @@ article p {
 
 section {
   background: var(--secondary);
+  padding: 2em;
 }
 
 section ul {
   /* positionering */
   display: flex;
   overflow: auto;
-  max-width: 20em;
+  max-width: 70vw;
   justify-content: center;
+  margin: 0 auto;
   /* opmaak */
   gap: 1em;
   list-style: none;
-}
-
-section ul::-webkit-scrollbar {
-  display: none;
+  padding: 2em;
 }
 
 section ul li {
@@ -150,6 +149,38 @@ section ul li {
   /* max-width: 60%; */
 }
 
+section button {
+  /* positionering */
+  display: flex;
+  margin: auto;
+  /* text customization */
+  font-family: "customfont";
+  background: var(--primary);
+  color: var(--textprimary);
+  font-size: 2em;
+  text-transform: uppercase;
+  /* button customization */
+  border: none;
+  padding: 0 0.5em;
+}
+
+section button:hover {
+  cursor: pointer;
+}
+
 footer {
   grid-area: footer;
+  margin-top: 2em;
+  padding: 4em;
+  /* kleuring */
+  background: var(--primary);
+}
+
+footer p {
+  /* positionering */
+  display: flex;
+  justify-content: end;
+  /* text customization */
+  font-family: "customfont";
+  color: var(--textprimary);
 }
