@@ -1,179 +1,123 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  :root {
-    --blue: #46637A;
-    --lightblue: #eff7ff;
-  }
-  
-  @font-face {
-    font-family: "customfont";
-    src: url(SairaCondensed-Bold.ttf);
-  }
-  body {
-    display: grid;
-    grid-template-areas: 
-    'n n n n'
-    'h h h h'
-    'm m m m'
-    'f f f f';
-    grid-template-rows: 0.2fr 1fr 3fr 0.2fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* font-family: Arial, Helvetica, sans-serif; */
-  }
-  
-  header {
-    grid-area: h;
-    background: var(--blue);
-    padding: 3em;
-    font-family: "customfont";
-  }
-  
-  header h1 {
-    display: flex;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 4em;
-    color: white;
-    font-family: "customfont";
-  }
-  
-  h2 {
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* button in de header */
-  .doemee {
-    padding: 12px;
-    text-decoration: none;
-    border: none;
-    font-size: 1.4em;
-    font-weight: 600;
-    color: var(--blue);
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    transition: 0.2s;
-  }
-  
-  header button:hover {
-    cursor: pointer;
-    font-size: 1.5em;
-  }
-  
-  a {
-    color:white;
-    text-decoration: none;
-  }
-  
-  nav {
-    grid-area: n;
-    background:#46637A;
-    padding: 2em;
-    font-family: "customfont";
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .aanmeldknop {
-    background: white;
-    color: var(--blue);
-    padding: 0 0.5em;
-    border-radius: 15px;
-  }
-  
-  nav li {
-    list-style: none;
-    font-weight: 600;
-    margin-right: 30px;
-  }
-  
-  main {
-    grid-area: m;
-    background: white;
-  }
-  
-  article {
-    display: grid;
-    grid-template-areas: 
-    'img h'
-    'img p';
-    padding: 5em;
-  }
-  
-  article img {
-    grid-area: img;
-  }
-  
-  h3 {
-    font-family: "customfont";
-    display: flex;
-    justify-content: left;
-    grid-area: h;
-    font-size: 3em;
-    margin-left: 1em;
-  }
-  
-  article p {
-    grid-area: p;
-    font-family: "customfont";
-    font-size: 1em;
-    width: 70%;
-    margin-left: 3em;
-  }
-  
-  section {
-    background: var(--lightblue);
-    padding: 7em;
-    width: 100%;
-  }
-  
-  h4 {
-    font-family: "customfont";
-    font-size: 3em;
-    display: flex;
-    justify-content: left;
-    padding-bottom: 1em;
-  }
-  
-  section ul {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    overflow-y: hidden;
-  }
-  
-  section li {
-    list-style: none;
-  }
-  
-  .bekijkmeer {
-    padding: 12px;
-    text-decoration: none;
-    border: none;
-    font-size: 1.4em;
-    font-weight: 600;
-    color: white;
-    background: var(--blue);
-    display: flex;
-    justify-content: center;
-    margin-top: 2em;
-  }
-  
-  footer {
-    grid-area: f;
-    background: var(--blue);
-    margin-top: 5em;
-    padding: 5em;
-    font-family: "customfont";
-    color: white;
-    display: flex;
-    justify-content: end;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: hsl(207, 27%, 38%);
+  --secondary: #eff7ff;
+  --textprimary: white;
+  --textsecondary: black;
+}
+
+@font-face {
+  font-family: "customfont";
+  src: url(SairaCondensed-Bold.ttf);
+}
+
+body {
+  display: grid;
+  grid-template-areas: 
+  'nav'
+  'header'
+  'main'
+  'footer';
+}
+
+nav {
+  grid-area: nav;
+  background: var(--primary);
+}
+
+nav ul {
+  /* positionering */
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: end;
+  padding: 1em;
+}
+
+nav ul li {
+  /* positionering */
+  margin-left: 2em;
+  /* text customization */
+  font-family: "customfont";
+  font-size: 1.1em;
+  text-transform: uppercase;
+  background: var(--primary);
+  color: var(--textprimary);
+  padding: 0 0.5em;
+}
+
+nav ul :last-child {
+  background-color: var(--textprimary);
+  color: var(--primary);
+  border-radius: 5em;
+}
+
+header {
+  grid-area: header;
+  background: var(--primary);
+}
+
+header h1 {
+  /* positionering */
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  /* text customization */
+  font-family: "customfont";
+  text-transform: uppercase;
+  color: var(--textprimary);
+  font-size: 4em;
+}
+
+header button {
+  /* positionering */
+  display: flex;
+  margin: auto;
+  margin-bottom: 2em;
+  /* text customization */
+  font-family: "customfont";
+  background: var(--textprimary);
+  color: var(--primary);
+  font-size: 2em;
+  text-transform: uppercase;
+  /* button customization */
+  border: none;
+  padding: 0 0.5em;
+}
+
+header button:hover {
+  cursor: pointer;
+}
+
+main {
+  grid-area: main;
+}
+
+article {
+  display: flex;
+  margin: 5em;
+  background: white;
+}
+
+section {
+  background: var(--secondary);
+}
+
+h2 {
+  /* positionering */
+  display: flex;
+  justify-content: space-around;
+  /* text customization */
+  font-family: "customfont";
+  text-transform: uppercase;
+  color: var(--textsecondary);
+}
+
+footer {
+  grid-area: footer;
+}
