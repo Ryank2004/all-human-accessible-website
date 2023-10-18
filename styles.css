@@ -104,8 +104,8 @@ article {
   background: white;
 }
 
-section {
-  background: var(--secondary);
+article h2 {
+  padding-left: 1em;
 }
 
 h2 {
@@ -115,7 +115,39 @@ h2 {
   /* text customization */
   font-family: "customfont";
   text-transform: uppercase;
+  font-size: 2.5em;
   color: var(--textsecondary);
+}
+
+article p {
+  /* text-customization */
+  font-family: "customfont";
+  font-weight: 100;
+}
+
+section {
+  background: var(--secondary);
+}
+
+section ul {
+  /* positionering */
+  display: flex;
+  overflow: auto;
+  max-width: 20em;
+  justify-content: center;
+  /* opmaak */
+  gap: 1em;
+  list-style: none;
+}
+
+section ul::-webkit-scrollbar {
+  display: none;
+}
+
+section ul li {
+  display: flex;
+  justify-content: center;
+  /* max-width: 60%; */
 }
 
 footer {
