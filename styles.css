@@ -9,6 +9,8 @@
   --secondary: #eff7ff;
   --textprimary: white;
   --textsecondary: black;
+  --outlinefocus: 5px ridge black;
+  --outlineradius: 3px;
 }
 
 @font-face {
@@ -49,6 +51,28 @@ nav ul li {
   background: var(--primary);
   color: var(--textprimary);
   padding: 0 0.5em;
+}
+
+nav ul li a {
+  /* text customization */
+  font-family: "customfont";
+  font-size: 1.1em;
+  text-transform: uppercase;
+  background: var(--primary);
+  color: var(--textprimary);
+  padding: 0 0.5em;
+  text-decoration: none;
+}
+
+body nav ul li:focus {
+  outline: var(--outlinefocus);
+  border-radius: var(--outlineradius);
+}
+
+nav ul li a:focus {
+  outline: var(--outlinefocus);
+  border-radius: var(--outlineradius);
+  /* outline-offset: 10px; */
 }
 
 nav ul :last-child {
@@ -92,6 +116,11 @@ header button {
 
 header button:hover {
   cursor: pointer;
+}
+
+header button:focus {
+  outline: var(--outlinefocus);
+  border-radius: var(--outlineradius);
 }
 
 main {
@@ -170,6 +199,11 @@ section button {
 
 section button:hover {
   cursor: pointer;
+}
+
+section button:focus {
+  outline: var(--outlinefocus);
+  border-radius: var(--outlineradius);
 }
 
 footer {
