@@ -170,8 +170,7 @@
   footer {
     grid-area: f;
     background: var(--blue);
-    margin-top: 5em;
-    padding: 5em;
+    padding: 2em;
     font-family: "customfont";
     color: white;
     display: flex;
