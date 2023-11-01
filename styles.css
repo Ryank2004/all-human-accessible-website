@@ -1,224 +1,130 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  --primary: hsl(207, 27%, 38%);
-  --secondary: #eff7ff;
-  --textprimary: white;
-  --textsecondary: black;
-  --outlinefocus: 5px ridge black;
-  --outlineradius: 3px;
+    --headerheight: 2em;
+    --mainfont: "urwdindemi";
+    --headerfontweight: 600;
+    --headerupcase: uppercase;
+    --headerbackground: rgb(31, 31, 66);
 }
 
 @font-face {
-  font-family: "customfont";
-  src: url(SairaCondensed-Bold.ttf);
+    font-family: urwdindemi;
+    src: url(fonts/URWDINSemiCond-Demi.ttf);
 }
 
 body {
-  display: grid;
-  grid-template-areas: 
-  'nav'
-  'header'
-  'main'
-  'footer';
+    background: var(--headerbackground);
 }
 
-nav {
-  grid-area: nav;
-  background: var(--primary);
+ul {
+    list-style: none;
 }
 
-nav ul {
-  /* positionering */
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  justify-content: end;
-  padding: 1em;
-}
-
-nav ul li {
-  /* positionering */
-  margin-left: 2em;
-  /* text customization */
-  font-family: "customfont";
-  font-size: 1.1em;
-  text-transform: uppercase;
-  background: var(--primary);
-  color: var(--textprimary);
-  padding: 0 0.5em;
-}
-
-nav ul li a {
-  /* text customization */
-  font-family: "customfont";
-  font-size: 1.1em;
-  text-transform: uppercase;
-  background: var(--primary);
-  color: var(--textprimary);
-  padding: 0 0.5em;
-  text-decoration: none;
-}
-
-body nav ul li:focus {
-  outline: var(--outlinefocus);
-  border-radius: var(--outlineradius);
-}
-
-nav ul li a:focus {
-  outline: var(--outlinefocus);
-  border-radius: var(--outlineradius);
-  /* outline-offset: 10px; */
-}
-
-nav ul :last-child {
-  background-color: var(--textprimary);
-  color: var(--primary);
-  border-radius: 5em;
+h1 {
+    font-family: var(--mainfont);
+    color: white;
 }
 
 header {
-  grid-area: header;
-  background: var(--primary);
+    display: flex;
+    padding: 1em;
 }
 
 header h1 {
-  /* positionering */
-  display: flex;
-  justify-content: center;
-  padding: 1em;
-  /* text customization */
-  font-family: "customfont";
-  text-transform: uppercase;
-  color: var(--textprimary);
-  font-size: 4em;
+    display: flex;
 }
 
-header button {
-  /* positionering */
-  display: flex;
-  margin: auto;
-  margin-bottom: 2em;
-  /* text customization */
-  font-family: "customfont";
-  background: var(--textprimary);
-  color: var(--primary);
-  font-size: 2em;
-  text-transform: uppercase;
-  /* button customization */
-  border: none;
-  padding: 0 0.5em;
+header ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-family: var(--mainfont);
+    gap: 2em;
+    margin-left: auto;
 }
 
-header button:hover {
-  cursor: pointer;
-}
-
-header button:focus {
-  outline: var(--outlinefocus);
-  border-radius: var(--outlineradius);
+header ul li a {
+    color: white;
+    text-decoration: none;
 }
 
 main {
-  grid-area: main;
+    padding-bottom: 1em;
 }
 
-article {
-  display: flex;
-  margin: 5em;
-  background: white;
+main img {
+    display: flex;
+    flex-direction: row;
+    width: 49.5vw;
 }
 
-article section {
-  background: white;
+.mainfotos {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0;
+    position: relative;
 }
 
-article section h2 {
-  justify-content: start;
+.vraag img {
+    border-top-right-radius: 10px;
 }
 
-h2 {
-  /* positionering */
-  display: flex;
-  justify-content: space-around;
-  /* text customization */
-  font-family: "customfont";
-  text-transform: uppercase;
-  font-size: 2.5em;
-  color: var(--textsecondary);
+.vraag h1 {
+    position: absolute;
+    top: 0;
+    margin: 13vw;
+    font-size: 3em;
+    text-shadow: 0 5px 5px black;
 }
 
-article p {
-  /* text-customization */
-  font-family: "customfont";
-  font-weight: 100;
+.vraagknop {
+    position: absolute;
+    top: 0;
+    background: var(--headerbackground);
+    padding: 1em 1.5em;
+    margin: 20vw;
+    box-shadow: 0 0 5px 0 black; 
+    border-radius: 2px; 
 }
 
-section {
-  background: var(--secondary);
-  padding: 2em;
+.vraagknop p {
+    color: white;
+    text-decoration: none;
+    font-family: var(--mainfont);
+    font-size: 2em;
 }
 
-section ul {
-  /* positionering */
-  display: flex;
-  overflow: auto;
-  max-width: 70vw;
-  justify-content: center;
-  margin: 0 auto;
-  /* opmaak */
-  gap: 1em;
-  list-style: none;
-  padding: 2em;
+.aanbod img {
+    border-top-left-radius: 10px;
 }
 
-section ul li {
-  display: flex;
-  justify-content: center;
-  /* max-width: 60%; */
+.aanbod h1 {
+    position: absolute;
+    width: 30vw;
+    top: 0;
+    margin: 13vw;
+    font-size: 3em;
+    text-shadow: 0 5px 5px black;
 }
 
-section button {
-  /* positionering */
-  display: flex;
-  margin: auto;
-  /* text customization */
-  font-family: "customfont";
-  background: var(--primary);
-  color: var(--textprimary);
-  font-size: 2em;
-  text-transform: uppercase;
-  /* button customization */
-  border: none;
-  padding: 0 0.5em;
+.aanbodknop {
+    position: absolute;
+    top: 0;
+    background: var(--headerbackground);
+    padding: 1em 1.5em;
+    margin: 20vw;
+    box-shadow: 0 0 5px 0 black;  
+    border-radius: 2px;
 }
 
-section button:hover {
-  cursor: pointer;
-}
-
-section button:focus {
-  outline: var(--outlinefocus);
-  border-radius: var(--outlineradius);
-}
-
-footer {
-  grid-area: footer;
-  margin-top: 2em;
-  padding: 4em;
-  /* kleuring */
-  background: var(--primary);
-}
-
-footer p {
-  /* positionering */
-  display: flex;
-  justify-content: end;
-  /* text customization */
-  font-family: "customfont";
-  color: var(--textprimary);
+.aanbodknop p {
+    color: white;
+    text-decoration: none;
+    font-family: var(--mainfont);
+    font-size: 2em;
 }
