@@ -25,10 +25,11 @@
     --optionstextcase: uppercase;
     --infobackground: rgb(236, 236, 236);       
     --infotext: black;
+    --logokleur: #072C48;
     --mainfontlight: "urw-din-light",arial,sans-serif;
     --mainfontblack: "urw-din-black",arial,sans-serif;
     --mainfontdemi: "urw-din-demi",arial,sans-serif;
-    --backgroundbutton: linear-gradient(rgb(44, 44, 44), black);
+    --backgroundbutton: linear-gradient(rgb(24, 64, 112), #072C48);
     --h1textshadow: rgba(0, 0, 0, 0.5) 0px 3px 6px;
     --fontsizeimgs: 1.5em;
 }   
@@ -37,7 +38,7 @@
     text-transform: var(--optionstextcase);
     display: flex;
     color: var(--optionstext);
-    background: var(--optionsbackground);
+    background: var(--logokleur);
     font-family: var(--mainfontlight);
     font-size: 0.8em;
     font-weight: 600;
@@ -187,7 +188,7 @@ h1 {
 }
 
 .standardbutton a:hover {
-    background: linear-gradient(rgb(44, 44, 44), black);
+    background: linear-gradient(rgb(24, 64, 112), #072C48);
     color: white;
     border: 0.5px solid black;
 }
