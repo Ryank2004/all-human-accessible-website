@@ -128,3 +128,22 @@ main img {
     font-family: var(--mainfont);
     font-size: 2em;
 }
+    border: none;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: white;
+    background: var(--blue);
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+  }
+  
+  footer {
+    grid-area: f;
+    background: var(--blue);
+    padding: 2em;
+    font-family: "customfont";
+    color: white;
+    display: flex;
+    justify-content: end;
+  }
