@@ -1,43 +1,118 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De Buurtcampus</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
+    <div class="options">
+        <p>De Hallen</p>
+        <a href="#">Over Ons</a>
+        <a href="#">Contact</a>
+    </div>
+    
+    <div class="info">
+        <a href="#">Bied jezelf aan of zoek naar een service</a>
+        <p>Vraag</p>
+        <p>Aanbod</p>
+    </div>
+    
     <header>
-        <h1>Buurtcampus</h1>
-        <ul>
-            <li><a href="#">Over Ons</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Vraag</a></li>
-            <li><a href="#">Aanbod</a></li>
-        </ul>
+        <div class="headercontentleft">
+            <a href="#"><img src="pics/hallenlogo.jpeg" alt="de hallen"></a>
+            <a href="#">Initiatieven</a>
+            <a href="#">Vrijwilligers</a>
+            <a href="#">Verenigingen</a>
+        </div>
+
+        <div class="headercontentright">
+            <div class="headersearch">
+            <p>Zoeken</p>
+            </div>
+        </div>
     </header>
 
     <main>
-        <div class="mainfotos">
-            <div class="vraag">
-              <img src="fotos/filmhallen 1 square.png" alt="filmhallen">
-              <a href="#"><div class="vraagknop"><p>Vraag</p></div></a>
-              <h1>Iets aan te bieden?</h1>
+        <section class="eerstedeel">
+            <div>
+                <div class="eerstecontent">
+                    <picture>
+                      <img src="pics/hallen ingang.png" alt="de hallen ingang">
+                    </picture>
+                    <div class="maincontenttext">
+                        <h1>Zoekt u een overzicht van alle intitiatieven?</h1>
+                        <p>Hier is alles op een rijtje</p>
+                        <div class="standardbutton">
+                            <a href="#">Overzicht</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="aanbod">
-                <img src="fotos/hallen ingang square.png" alt="hallen ingang">
-                <a href="#"><div class="aanbodknop"><p>Aanbod</p></div></a>
-                <h1>Op zoek naar iets?</h1>
-            </div>
-        </div>
-    </main>
-  <main>
-   
-  </main>
+        </section>
 
-  <footer>
-    <p>Website van Koen, Ryan en Bibek</p>
-  </footer>
+        <section class="tweededeel">
+            <div class="imagestweededeel">
+                <div class="aanbodimg">
+                    <picture><img src="pics/fotootje.jpg" alt="fotoshoot"></picture>
+                    <div class="aanbod">
+                        <h1>Op zoek naar iets?</h1>
+                        <p>Vind een service voor jou evenement</p>
+                        <div class="standardbutton">
+                            <a href="#">Vraag</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="vraagimg">
+                    <img src="pics/gang hallen.jpg" alt="ging in de hallen">
+                    <div class="vraag">
+                        <h1>Iets aan te bieden?</h1>
+                        <p>Bied uzelf aan voor anderen</p>
+                        <div class="standardbutton">
+                            <a href="#">Aanbod</a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+        
+        <section class="derdedeel">
+            <div class="derdecontent">
+                <div class="derdedeeleen">
+                    <img src="pics/filmhallen 1 square.png" alt="filmhallen">
+                    <h1>Sociaal</h1>
+                </div>
+                
+                <div class="derdedeeltwee">
+                    <picture><img src="pics/kamer.jpg" alt="kamer"></picture>
+                  <h1>Contact</h1>
+                </div>
+                <div class="derdedeeldrie">
+                  <picture><img src="pics/filmhallen 2 square.png" alt="andere filmhallen"></picture>
+                  <h1>Filmhallen</h1>
+                </div>
+              </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footereen">
+          <div class="footereenlinks">
+            <a href="#">Vind De Hallen</a>    
+          </div>
+          <div class="footereenmidden">
+            <a href="#">Word herinnerd</a>
+          </div>
+          <div class="footereenrechts">
+            <a href="#">Informatie</a>
+          </div>
+        </div>
+        <br><br><br><br><hr><br><br>
+    </footer>
+
 </body>
 </html>
