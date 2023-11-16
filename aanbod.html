@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="script.js">
   </head>
   <body>
     <div class="options">
@@ -34,14 +35,56 @@
         </div>
       </div>
     </header>
-    <hr/>
+    <hr />
 
     <div class="container">
       <section>
         <h1 class="main-tekst">Heb jij ook leuke ideeën voor in de buurt?</h1>
         <h2>Vraag een formulier aan of meld je aan</h2>
-        <h3><button class="aanvraag-btn">Aanvragen formulier</button><button class="aanmeld-btn">Aanmelden</button></h3>
+        <h3>
+          <button class="aanvraag-btn">Aanvragen formulier</button>
+          <div class="center">
+          <button id="show-login">Login</button>
+</div>
+        </h3>
       </section>
     </div>
+    <!--Hier staat de pop up voor als je wilt aanmelden-->
+<hr>
+<div class="popup">
+  <div class="close-btn">&times;</div>
+  <div class="form">
+    <h2>Meld je aan</h2>
+    <div class="form-element">
+      <label for="email">Email</label>
+      <input type="text" id="email" placeholder="Email">
+    </div>
+    <div class="form-element">
+      <label for="password">Wachtwoord</label>
+      <input type="password" id="password" placeholder="Wachtwoord">
+    </div>
+    <div class="form-element">
+      <input type="checkbox" id="remember-me">
+      <label for="remember-me">Remember me</label>
+    </div>
+    <div class="form-element">
+      <button>Registreren</button>
+    </div>
+    <div class="form-element">
+      <a href="#">Forgot password?</a>
+    </div>
+  </div>
+</div>
+
+ <!--Dit stukje JS hoort bij de pop up-->
+<script>
+  document.querySelector("#show-login").addEventListener("click",function(){
+  document.querySelector(".popup").classList.add("active");
+});
+document.querySelector(".popup .close-btn").addEventListener("click",function(){
+  document.querySelector(".popup").classList.remove("active");
+});
+</script>
+
   </body>
 </html>
